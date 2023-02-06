@@ -60,6 +60,9 @@ int main(){
 		cin.ignore();
 		cout<<"Sign password :"<<usr.password<<endl<<"Log password :"<<usr.password1<<endl;
 			
+		/*The issue with the code is that the strcmp function is used to compare two C-style strings (char arrays) 
+		but the password1 and password variables are of type string. To fix the issue, the string variables need to 
+		be converted to C-style strings using the c_str() function before passing them to strcmp */
 	    if((strcmp(usr.phoneNumber,usr.phoneNum)==0 )&&( strcmp(usr.password1.c_str(),usr.password.c_str())==0 )){
 			cout<<"Success";
 			}else{
